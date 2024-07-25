@@ -13,13 +13,11 @@ _An opinionated collection of container images_
 
 <div align="center">
 
-![GitHub Repo stars](https://img.shields.io/github/stars/onedr0p/containers?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/onedr0p/containers?style=for-the-badge)
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/onedr0p/containers/release-scheduled.yaml?style=for-the-badge&label=Scheduled%20Release)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/frantathefranta/containers/release-scheduled.yaml?style=for-the-badge&label=Scheduled%20Release)
 
 </div>
 
-Welcome to my container images, if looking for a container start by [browsing the GitHub Packages page for this repo's packages](https://github.com/onedr0p?tab=packages&repo_name=containers).
+Welcome to my container images, if looking for a container start by [browsing the GitHub Packages page for this repo's packages](https://github.com/frantathefranta?tab=packages&repo_name=containers).
 
 ## Mission statement
 
@@ -55,7 +53,7 @@ networks:
     external: true
 services:
   sonarr:
-    image: ghcr.io/onedr0p/sonarr:3.0.8.1507
+    image: ghcr.io/frantathefranta/sonarr:3.0.8.1507
     container_name: sonarr
     user: 65534:65534
     # ...
@@ -124,5 +122,6 @@ Containers here can be **deprecated** at any point, this could be for any reason
 **Note**: Deprecated containers will remained published to this repo for 6 months after which they will be pruned.
 
 ## Credits
-
+ --
+This is a fork of [onedr0p/containers](https://github.com/onedr0p/containers). I'm grateful for his work on setting this up.
 A lot of inspiration and ideas are thanks to the hard work of [hotio.dev](https://hotio.dev/) and [linuxserver.io](https://www.linuxserver.io/) contributors.
