@@ -11,12 +11,15 @@ ENV HOME=/config \
     TRANSMISSION_WEB_HOME=/app/web
 
 #hadolint ignore=DL3018
-RUN apk add --no-cache bash ca-certificates findutils geoip p7zip python3 \
+RUN apk add --no-cache bash curl ca-certificates findutils geoip p7zip python3 \
     transmission-cli~"${VERSION}" \
     transmission-daemon~"${VERSION}" \
     transmission-remote~"${VERSION}"
 
 RUN mkdir -p /app
+RUN curl -L https://github.com/a8m/envsubst/releases/download/v1.4.2/envsubst-$(uname -s)-$(uname -m) -o /app/envsubst \
+    && chmod +x /app/envsubst
+
 
 #hadolint ignore=DL3059
 RUN chown -R root:root /usr/bin/transmission* \
