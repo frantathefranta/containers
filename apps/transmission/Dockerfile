@@ -1,4 +1,4 @@
-FROM docker.io/library/alpine:3.20
+FROM docker.io/library/alpine:3.20.2
 
 ARG TARGETPLATFORM
 ARG VERSION
@@ -17,7 +17,9 @@ RUN apk add --no-cache bash curl ca-certificates findutils geoip p7zip python3 \
     transmission-remote~"${VERSION}"
 
 RUN mkdir -p /app
-RUN curl -L https://github.com/a8m/envsubst/releases/download/v1.4.2/envsubst-$(uname -s)-$(uname -m) -o /app/envsubst \
+# renovate: datasource=github-releases depName=a8m/envsubst
+ENV ENVSUBST_VERSION=v1.4.2
+RUN curl -L https://github.com/a8m/envsubst/releases/download/${ENVSUBST_VERSION}/envsubst-$(uname -s)-$(uname -m) -o /app/envsubst \
     && chmod +x /app/envsubst
 
 
