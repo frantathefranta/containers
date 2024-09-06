@@ -56,6 +56,7 @@ RUN \
     && \
     pip install \
         beets==${VERSION} \
+        flask \
     && \
     mkdir -p /config \
     && chown nobody:nogroup -R /config \
@@ -72,6 +73,9 @@ WORKDIR /config
 VOLUME ["/config"]
 
 COPY ./apps/beets/entrypoint.sh /entrypoint.sh
-CMD ["bash"]
+# COPY ./apps/beets/web-config.yaml /config/web-config.yaml
+EXPOSE 8837
+ENTRYPOINT [ "/entrypoint.sh" ]
+# CMD ["/bin/bash"]
 
 LABEL org.opencontainers.image.source="https://github.com/beetbox/beets"
