@@ -106,6 +106,7 @@ Each Image will be built with a `rolling` tag, along with tags specific to it's 
 
 Container | Channel | Image
 --- | --- | ---
+[beets](https://github.com/frantathefranta/containers/pkgs/container/beets) | stable | ghcr.io/frantathefranta/beets
 [cdpgvector](https://github.com/frantathefranta/containers/pkgs/container/cdpgvector) | stable | ghcr.io/frantathefranta/cdpgvector
 [transmission](https://github.com/frantathefranta/containers/pkgs/container/transmission) | stable | ghcr.io/frantathefranta/transmission
 

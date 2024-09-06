@@ -15,8 +15,8 @@ ENV \
     HOME="/config"
 
 RUN \
-    # apk add --no-cache --virtual=build-dependencies \
-    #   build-base \
+    apk add --no-cache --virtual=.build-deps \
+      build-base \
     #   cairo-dev \
     #   cargo \
     #   cmake \
@@ -28,7 +28,8 @@ RUN \
     #   libpng-dev \
     #   mpg123-dev \
     #   openjpeg-dev \
-    #   python3-dev && \
+    #   python3-dev
+    && \
     apk add --no-cache \
         bash \
     #   chromaprint \
@@ -50,7 +51,7 @@ RUN \
     #   openjpeg \
     #   python3 \
     #   sqlite-libs
-    && \
+    # && \
     # pip install uv \
     && \
     pip install \
@@ -71,6 +72,6 @@ WORKDIR /config
 VOLUME ["/config"]
 
 COPY ./apps/beets/entrypoint.sh /entrypoint.sh
-CMD ["/entrypoint.sh"]
+CMD ["bash"]
 
 LABEL org.opencontainers.image.source="https://github.com/beetbox/beets"
