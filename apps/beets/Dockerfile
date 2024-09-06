@@ -22,7 +22,7 @@ RUN \
     #   cmake \
     #   ffmpeg-dev \
     #   fftw-dev \
-    #   git \
+      git \
     #   gobject-introspection-dev \
     #   jpeg-dev \
     #   libpng-dev \
