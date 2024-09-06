@@ -57,6 +57,14 @@ RUN \
     pip install \
         beets==${VERSION} \
         flask \
+        beets-extrafiles \
+        beetcamp \
+        discogs-client \
+        pyacoustid \
+        pylast \
+        requests \
+        unidecode \
+        git+https://github.com/x1ppy/beets-originquery \
     && \
     mkdir -p /config \
     && chown nobody:nogroup -R /config \
@@ -74,7 +82,7 @@ VOLUME ["/config"]
 
 COPY ./apps/beets/entrypoint.sh /entrypoint.sh
 # COPY ./apps/beets/web-config.yaml /config/web-config.yaml
-EXPOSE 8837
+EXPOSE 8337
 ENTRYPOINT [ "/entrypoint.sh" ]
 # CMD ["/bin/bash"]
 
