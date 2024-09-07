@@ -59,7 +59,7 @@ RUN \
         flask \
         beets-extrafiles \
         beetcamp \
-        discogs-client \
+        python3-discogs-client \
         pyacoustid \
         pylast \
         requests \
