@@ -26,6 +26,7 @@ RUN \
         flac \
         imagemagick \
         neovim \
+        restic \
     && \
     pip install \
         beets==${VERSION} \
