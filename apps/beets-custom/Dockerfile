@@ -26,6 +26,7 @@ RUN \
         flac \
         imagemagick \
         neovim \
+        restic \
     && \
     pip install \
         beets==${VERSION} \
@@ -53,7 +54,7 @@ USER nobody:nogroup
 WORKDIR /config
 VOLUME ["/config"]
 
-COPY ./apps/beets/entrypoint.sh /entrypoint.sh
+COPY ./apps/beets-custom/entrypoint.sh /entrypoint.sh
 EXPOSE 8337
 ENTRYPOINT [ "/entrypoint.sh" ]
 

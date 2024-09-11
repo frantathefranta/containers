@@ -1,5 +1,5 @@
 ---
-app: beets
+app: beets-custom
 base: false
 channels:
   - name: stable
