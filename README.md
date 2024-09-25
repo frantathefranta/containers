@@ -109,6 +109,7 @@ Container | Channel | Image
 [beets-custom](https://github.com/frantathefranta/containers/pkgs/container/beets-custom) | stable | ghcr.io/frantathefranta/beets-custom
 [cdpgvector](https://github.com/frantathefranta/containers/pkgs/container/cdpgvector) | stable | ghcr.io/frantathefranta/cdpgvector
 [transmission](https://github.com/frantathefranta/containers/pkgs/container/transmission) | stable | ghcr.io/frantathefranta/transmission
+[transmission](https://github.com/frantathefranta/containers/pkgs/container/transmission) | stable | ghcr.io/frantathefranta/transmission
 
 
 ## Deprecations
