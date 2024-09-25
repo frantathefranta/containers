@@ -1,6 +1,6 @@
 ---
 app: beets-custom
-base: false
+semver: true
 channels:
   - name: stable
     platforms: ["linux/amd64", "linux/arm64"]

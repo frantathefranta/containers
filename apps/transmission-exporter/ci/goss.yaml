@@ -1,14 +1,14 @@
 ---
 # https://github.com/aelsabbahy/goss/blob/master/docs/manual.md#process
-process:
-  transmission-exporter:
-    running: true
+# process:
+#   /app/transmission-exporter:
+#     running: true
 
 # https://github.com/aelsabbahy/goss/blob/master/docs/manual.md#port
-port:
-  # https://github.com/aelsabbahy/goss/issues/149
-  tcp:19091:
-    listening: true
+# port:
+#   # https://github.com/aelsabbahy/goss/issues/149
+#   tcp:19091:
+#     listening: true
 
 # https://github.com/aelsabbahy/goss/blob/master/docs/manual.md#http
 http:

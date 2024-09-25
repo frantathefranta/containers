@@ -4,10 +4,12 @@ ARG TARGETPLATFORM
 ARG VERSION
 ARG CHANNEL
 
+USER root
+WORKDIR /app
+
 RUN apk add --no-cache \
     ca-certificates \
     curl \
-    tar \
     && \
     mkdir -p /app \
     && \
@@ -16,14 +18,16 @@ RUN apk add --no-cache \
         'linux/arm64') export ARCH='arm64' ;; \
     esac \
     && \
-    curl -L https://github.com/frantathefranta/transmission-exporter/releases/download/${VERSION}/transmission-exporter-${VERSION}-linux-${ARCH}.tar.gz -o transmission-exporter.tar.gz \
+    curl -L https://github.com/frantathefranta/transmission-exporter/releases/download/v${VERSION}/transmission-exporter-v${VERSION}-linux-${ARCH} -o /app/transmission-exporter \
+    # && \
+    # chown -R root:root /app \
+    # && \
+    # chmod -R 755 /app \
     && \
-    tar -xvzf transmission-exporter.tar.gz \
-    && \
-    mv ./transmission-exporter /app/transmission-exporter
+    chmod +x /app/transmission-exporter
 
 USER nobody:nogroup
 
-ENTRYPOINT ["/app/transmission-exporter"]
+CMD ["/app/transmission-exporter"]
 
 LABEL org.opencontainers.image.source="https://github.com/frantathefranta/transmission-exporter"
