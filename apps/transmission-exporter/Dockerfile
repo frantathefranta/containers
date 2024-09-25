@@ -18,7 +18,7 @@ RUN apk add --no-cache \
     && \
     curl -L https://github.com/frantathefranta/transmission-exporter/releases/download/${VERSION}/transmission-exporter-${VERSION}-linux-${ARCH}.tar.gz -o transmission-exporter.tar.gz \
     && \
-    tar xvzf transmission-exporter.tar.gz \
+    tar -xvzf transmission-exporter.tar.gz \
     && \
     mv ./transmission-exporter /app/transmission-exporter
 

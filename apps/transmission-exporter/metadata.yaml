@@ -1,5 +1,5 @@
 ---
-app: transmission
+app: transmission-exporter
 base: false
 channels:
   - name: stable
