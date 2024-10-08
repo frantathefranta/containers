@@ -18,6 +18,7 @@ ENV \
 RUN \
     apk add --no-cache --virtual=.build-deps \
       build-base \
+      cargo \
       git \
     && \
     apk add --no-cache \
