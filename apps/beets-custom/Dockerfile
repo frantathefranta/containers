@@ -30,6 +30,7 @@ RUN \
         restic \
     && \
     pip install \
+        git+https://github.com/geigerzaehler/mediafile/@replace-imghdr \
         beets==${VERSION} \
         flask \
         beets-extrafiles \
