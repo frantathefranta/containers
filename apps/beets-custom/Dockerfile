@@ -30,8 +30,6 @@ RUN \
         restic \
     && \
     pip install \
-        # Necessary until beetbox/mediafile/pull/75 gets merged
-        git+https://github.com/geigerzaehler/mediafile/@replace-imghdr \
         beets==${VERSION} \
         flask \
         beets-extrafiles \
