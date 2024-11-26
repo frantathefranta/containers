@@ -35,6 +35,7 @@ RUN \
         beets-extrafiles \
         beetcamp \
         python3-discogs-client \
+        typing-extensions \
         pyacoustid \
         pylast \
         requests \
