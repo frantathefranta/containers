@@ -5,11 +5,14 @@
     "docker:enableMajor",
     ":dependencyDashboard",
     ":disableRateLimiting",
-    ":timezone(America/New_York)",
+    "mergeConfidence:all-badges",
+    "security:openssf-scorecard",
     ":semanticCommits"
   ],
+  "timezone": "America/Detroit",
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
   "suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
+  "rebaseWhen": "conflicted",
   "packageRules": [
     {
       "addLabels": ["renovate/container", "type/major"],
