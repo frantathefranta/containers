@@ -10,13 +10,15 @@ RUN wget -q -O /tmp/varroa.zip "https://gitlab.com/passelecasque/varroa/-/jobs/a
     && \
     unzip -q -d /app /tmp/varroa.zip \
     && \
+    cp /app/varroa /usr/local/bin/varroa \
+    && \
     apk add --no-cache libc6-compat ca-certificates \
-    &&
-
+    && \
+    rm /tmp/varroa.zip
 
 VOLUME /config
 WORKDIR /config
 
-CMD /usr/bin/varroa start --no-daemon
+CMD /usr/local/bin/varroa start --no-daemon
 
 LABEL org.opencontainers.image.source="https://gitlab.com/passelecasque/varroa"
