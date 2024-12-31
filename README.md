@@ -110,6 +110,7 @@ Container | Channel | Image
 [cdpgvector](https://github.com/frantathefranta/containers/pkgs/container/cdpgvector) | stable | ghcr.io/frantathefranta/cdpgvector
 [transmission](https://github.com/frantathefranta/containers/pkgs/container/transmission) | stable | ghcr.io/frantathefranta/transmission
 [transmission-exporter](https://github.com/frantathefranta/containers/pkgs/container/transmission-exporter) | stable | ghcr.io/frantathefranta/transmission-exporter
+[varroa](https://github.com/frantathefranta/containers/pkgs/container/varroa) | stable | ghcr.io/frantathefranta/varroa
 
 
 ## Deprecations
