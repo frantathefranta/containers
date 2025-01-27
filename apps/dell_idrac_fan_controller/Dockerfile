@@ -13,7 +13,7 @@ RUN wget -q -O /tmp/source.zip "https://github.com/tigerblue77/Dell_iDRAC_fan_co
     && \
     cp /app/*/*.sh /app \
     && \
-    chmod +x /app/functions.sh Dell_iDRAC_fan_controller.sh \
+    chmod +x /app/functions.sh /app/Dell_iDRAC_fan_controller.sh \
     && \
     rm /tmp/source.zip
 
