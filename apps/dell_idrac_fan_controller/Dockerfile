@@ -1,4 +1,4 @@
-FROM docker.io/library/alpine:3.21.2
+FROM docker.io/library/alpine:3.21.0
 
 ARG TARGETPLATFORM
 ARG VERSION
@@ -13,11 +13,12 @@ RUN wget -q -O /tmp/source.zip "https://github.com/tigerblue77/Dell_iDRAC_fan_co
     && \
     cp /app/*/*.sh /app \
     && \
-    chmod +x /app/functions.sh /app/Dell_iDRAC_fan_controller.sh \
+    chmod 0777 /app/functions.sh /app/Dell_iDRAC_fan_controller.sh \
     && \
     rm /tmp/source.zip
 
+USER nobody:nogroup
 WORKDIR /app
-ENTRYPOINT ["./Dell_iDRAC_fan_controller.sh"]
+ENTRYPOINT ["/app/Dell_iDRAC_fan_controller.sh"]
 
 LABEL org.opencontainers.image.source="https://github.com/tigerblue77/Dell_iDRAC_fan_controller_Docker"
