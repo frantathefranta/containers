@@ -1,0 +1,9 @@
+---
+app: dell_idrac_fan_controller
+semver: true
+channels:
+  - name: stable
+    platforms: ["linux/amd64", "linux/arm64"]
+    stable: true
+    tests:
+      enabled: false
