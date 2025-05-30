@@ -1,4 +1,4 @@
-FROM alpine:3.21.3 AS dwld
+FROM alpine:3.22.0 AS dwld
 
 ARG TARGETPLATFORM
 ARG VERSION
