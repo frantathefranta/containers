@@ -1,2 +1,2 @@
-netbox-kea
+netbox-kea == 1.0.1
 netbox-bgp == 0.15.0
