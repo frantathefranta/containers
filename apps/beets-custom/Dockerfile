@@ -40,7 +40,7 @@ RUN \
         pylast \
         requests \
         unidecode \
-        git+https://github.com/x1ppy/beets-originquery \
+        git+https://github.com/frantathefranta/beets-originquery \
     && \
     mkdir -p /config \
     && chown nobody:nogroup -R /config \
