@@ -107,11 +107,8 @@ Each Image will be built with a `rolling` tag, along with tags specific to it's 
 Container | Channel | Image
 --- | --- | ---
 [beets-custom](https://github.com/frantathefranta/containers/pkgs/container/beets-custom) | stable | ghcr.io/frantathefranta/beets-custom
-[cdpgvector](https://github.com/frantathefranta/containers/pkgs/container/cdpgvector) | stable | ghcr.io/frantathefranta/cdpgvector
-[dell_idrac_fan_controller](https://github.com/frantathefranta/containers/pkgs/container/dell_idrac_fan_controller) | stable | ghcr.io/frantathefranta/dell_idrac_fan_controller
 [netbox-custom](https://github.com/frantathefranta/containers/pkgs/container/netbox-custom) | stable | ghcr.io/frantathefranta/netbox-custom
 [transmission](https://github.com/frantathefranta/containers/pkgs/container/transmission) | stable | ghcr.io/frantathefranta/transmission
-[transmission-exporter](https://github.com/frantathefranta/containers/pkgs/container/transmission-exporter) | stable | ghcr.io/frantathefranta/transmission-exporter
 [varroa](https://github.com/frantathefranta/containers/pkgs/container/varroa) | stable | ghcr.io/frantathefranta/varroa
 
 
