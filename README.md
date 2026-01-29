@@ -108,7 +108,6 @@ Container | Channel | Image
 --- | --- | ---
 [beets-custom](https://github.com/frantathefranta/containers/pkgs/container/beets-custom) | stable | ghcr.io/frantathefranta/beets-custom
 [netbox-custom](https://github.com/frantathefranta/containers/pkgs/container/netbox-custom) | stable | ghcr.io/frantathefranta/netbox-custom
-[transmission](https://github.com/frantathefranta/containers/pkgs/container/transmission) | stable | ghcr.io/frantathefranta/transmission
 [transmission-custom](https://github.com/frantathefranta/containers/pkgs/container/transmission-custom) | stable | ghcr.io/frantathefranta/transmission-custom
 [varroa](https://github.com/frantathefranta/containers/pkgs/container/varroa) | stable | ghcr.io/frantathefranta/varroa
 
