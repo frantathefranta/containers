@@ -1,4 +1,4 @@
-FROM ghcr.io/home-operations/transmission:4.0.6
+FROM ghcr.io/home-operations/transmission:4.1.0
 
 USER root:root
 RUN apk add --no-cache git pipx && \
