@@ -16,7 +16,7 @@ RUN apk add --no-cache bash curl ca-certificates findutils geoip git p7zip pytho
     transmission-daemon~"${VERSION}" \
     transmission-remote~"${VERSION}"
 
-RUN pipx install git+https://github.com/x1ppy/gazelle-origin
+RUN pipx install git+https://github.com/spinfast319/gazelle-origin
 
 RUN mkdir -p /app
 # renovate: datasource=github-releases depName=a8m/envsubst
