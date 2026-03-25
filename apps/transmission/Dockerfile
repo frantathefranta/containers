@@ -16,7 +16,6 @@ RUN apk add --no-cache bash curl ca-certificates findutils geoip git p7zip pytho
     transmission-daemon~"${VERSION}" \
     transmission-remote~"${VERSION}"
 
-RUN pipx install git+https://github.com/spinfast319/gazelle-origin
 
 RUN mkdir -p /app
 # renovate: datasource=github-releases depName=a8m/envsubst
@@ -24,6 +23,7 @@ ENV ENVSUBST_VERSION=v1.4.2
 RUN curl -L https://github.com/a8m/envsubst/releases/download/${ENVSUBST_VERSION}/envsubst-$(uname -s)-$(uname -m) -o /app/envsubst \
     && chmod +x /app/envsubst
 
+RUN HOME=/app XDG_CONFIG_HOME=/app XDG_DATA_HOME=/app pipx install git+https://github.com/spinfast319/gazelle-origin
 
 #hadolint ignore=DL3059
 RUN chown -R root:root /usr/bin/transmission* \
