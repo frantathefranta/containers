@@ -17,13 +17,12 @@ jobs:
 
       - name: Get Changed Files
         id: changed-files
-        uses: JJGadgets/tj-actions-changed-files@9200e69727eb73eb060652b19946b8a2fdfb654b
+        uses: bjw-s-labs/action-changed-files@015416e33c709af88f84a4496f4030c1f0ef212e # v0.5.0
         with:
-          files_yaml: |
-            cue:
-              - metadata.rules.cue
-              - apps/**/metadata.json
-              - apps/**/metadata.yaml
+          patterns: |
+            metadata.rules.cue
+            apps/**/metadata.json
+            apps/**/metadata.yaml
 
       - name: Setup CUE
         if: ${{ steps.changed-files.outputs.cue_any_changed == 'true' }}

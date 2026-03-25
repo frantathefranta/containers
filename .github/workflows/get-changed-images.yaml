@@ -17,7 +17,7 @@ jobs:
     name: Get Changed Images
     runs-on: ubuntu-latest
     outputs:
-      addedOrModified: "${{ steps.changed-files.outputs.all_changed_and_modified_files_count > 0 }}"
+      addedOrModified: "${{ steps.changed-files.outputs.changed_files != '[]' }}"
       addedOrModifiedImages: "${{ steps.changed-containers.outputs.addedOrModifiedImages }}"
     steps:
       - name: Checkout
@@ -27,21 +27,19 @@ jobs:
 
       - name: Get Changed Files
         id: changed-files
-        uses: tj-actions/changed-files@v47
+        uses: bjw-s-labs/action-changed-files@015416e33c709af88f84a4496f4030c1f0ef212e # v0.5.0
         with:
-          files: apps/**
-          dir_names: true
-          dir_names_max_depth: 2
-          json: true
-          escape_json: false
+          patterns: apps/**
+          include_only_directories: true
+          max_depth: 2
 
-      - if: ${{ steps.changed-files.outputs.all_changed_and_modified_files_count > 0 }}
+      - if: ${{ needs.changed-files.outputs.changed_files != '[]' }}
         name: Determine changed images
         id: changed-containers
         shell: bash
         run: |
           IMAGES=$( \
-              echo '${{ steps.changed-files.outputs.all_changed_and_modified_files }}' \
+              echo '${{ steps.changed-files.outputs.changed_files }}' \
                   | jq --raw-output 'map(sub("^apps/"; "")) | join(",")' \
           )
           echo "addedOrModifiedImages=${IMAGES}" >> $GITHUB_OUTPUT
